@@ -3,13 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/rectangle_background"
     android:layout_margin="5dp">
     <TextView
         android:id="@+id/tv_botomsheet_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:padding="5dp"
         android:textAlignment="center"
         android:textSize="20sp"/>

@@ -38,11 +38,13 @@ class SplashActivity : AppCompatActivity() {
         Log.d("Splash Activity--",""+hr1)
 
         if (hr1 < 12) {
-            activitySplashBinding.tvWelcomeText.text = "Welcome to NEWS@ MORNING"
+            activitySplashBinding.tvWelcomeText.text = "Welcome to \n NEWS@ MORNING"
         } else if (hr1 > 12 && hr1 < 17) {
-            activitySplashBinding.tvWelcomeText.text = "Welcome to NEWS@ AFTERNOON"
+            activitySplashBinding.tvWelcomeText.text = "Welcome to \n NEWS@ AFTERNOON"
         } else if (hr1 > 17 && hr1 < 20) {
-            activitySplashBinding.tvWelcomeText.text = "Welcome to NEWS@ EVENING"
+            activitySplashBinding.tvWelcomeText.text = "Welcome to \n NEWS@ EVENING"
+        }else if (hr1>20){
+            activitySplashBinding.tvWelcomeText.text = "Welcome to \n NEWS@ NIGHT"
         }
     }
 }

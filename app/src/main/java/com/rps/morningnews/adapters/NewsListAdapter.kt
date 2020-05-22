@@ -46,7 +46,6 @@ class NewsListAdapter(val articleList:List<ArticleModel>,val articleClickListene
         init {
             mTitleView = itemView.findViewById(R.id.text_view_title)
             mImageView = itemView.findViewById(R.id.image_view_list)
-            mDescriptionView = itemView.findViewById(R.id.text_view_description)
         }
 
         fun bind(
@@ -57,13 +56,6 @@ class NewsListAdapter(val articleList:List<ArticleModel>,val articleClickListene
             articleClickListener: (ArticleModel) -> Unit
         ) {
             mTitleView?.text = title!!
-            if(description.length>80){
-                val  shortDescription = description.substring(0,80);
-                mDescriptionView?.text = shortDescription+"..."
-            }else{
-                mDescriptionView?.text = description
-            }
-
             if (imageUrl != null) {
                 Glide.with(mContext).load(imageUrl!!).into(mImageView)
             } else {

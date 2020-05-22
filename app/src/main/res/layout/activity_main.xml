@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+    android:background="#b19cd9"
     android:weightSum="10"
     tools:context=".activities.MainActivity">
     <LinearLayout
@@ -15,18 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:weightSum="10">
     <TextView
         android:id="@+id/tv_news_heading"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:textSize="18sp"
         android:text="TOP-HEADLINES"
-        android:textStyle="bold"
-        android:textColor="#00BFFF"
-        android:layout_weight="1"
+        android:textColor="#ffffff"
         android:gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -34,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:spanCount="1"
-        android:layout_weight="8"
+        android:layout_weight="10"
         android:visibility="visible"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -47,9 +44,8 @@
         android:background="@drawable/rectangle_button_background"
         android:textSize="16sp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
-        android:layout_height="0dp"/>
+
+        android:layout_height="50dp"/>
     </LinearLayout>
     <ProgressBar
         android:id="@+id/progress_bar"
