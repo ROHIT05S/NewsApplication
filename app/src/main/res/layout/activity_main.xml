@@ -3,55 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#b19cd9"
-    android:weightSum="10"
-    tools:context=".activities.MainActivity">
-    <LinearLayout
-        android:id="@+id/news_layout"
+    <FrameLayout
+        android:id="@+id/frame_layout_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="visible"
-        android:weightSum="10">
-    <TextView
-        android:id="@+id/tv_news_heading"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="18sp"
-        android:text="TOP-HEADLINES"
-        android:textColor="#ffffff"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b19cd9"
+            android:orientation="vertical"
+            android:weightSum="10"
+            tools:context=".activities.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_news_list"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:spanCount="1"
-        android:layout_weight="10"
-        android:visibility="visible"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <Button
-        android:id="@+id/btn_categories_list"
-        android:layout_width="match_parent"
-        android:text="News Categories"
-        android:textAllCaps="false"
-        android:textColor="#ffffff"
-        android:background="@drawable/rectangle_button_background"
-        android:textSize="16sp"
-        android:layout_gravity="center"
+            <LinearLayout
+                android:id="@+id/news_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:weightSum="10">
 
-        android:layout_height="50dp"/>
-    </LinearLayout>
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:visibility="visible"/>
-</LinearLayout>
+                <TextView
+                    android:id="@+id/tv_news_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="TOP-HEADLINES"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:spanCount="1" />
+
+                <Button
+                    android:id="@+id/btn_categories_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_button_background"
+                    android:text="News Categories"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+        </LinearLayout>
+    </FrameLayout>
 </layout>

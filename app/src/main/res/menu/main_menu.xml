@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/news_icon"
+        android:title="About"
+         />
+    <item
+        android:id="@+id/action_feedback"
+        android:icon="@drawable/ic_feedback_black"
+        android:title="Feedback" />
+    <item
+        android:id="@+id/action_setting"
+        android:title="Setting" />
+</menu>
